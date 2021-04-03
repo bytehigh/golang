@@ -4,6 +4,15 @@ A very simple conversion program that converts ZX Spectrum Picturesque Assembler
 
 Picturesque assembler files are almost completely ASCII already, only the line numbers need conversion.
 
+Command line arguments:
+-f <input filename>
+-o <output filename>
+
+If no input file is provided the program will terminate with an open file error.
+If no output file is provided the program will write to "output.asm" by default.
+
+If the output file already exists it will be overwritten, so please be careful!
+
 File format:
 File header of 128 bytes
 Next byte is 0xOD - each line that follows is terminated by 0xOD
