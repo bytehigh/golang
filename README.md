@@ -8,23 +8,29 @@ Command line arguments:
 -f input_filename
 -o output_filename
 
-If no input file is provided the program will terminate with an open file error.
-If no output file is provided the program will write to "output.asm" by default.
+<ul>
+  <li>If no input file is provided the program will terminate with an open file error.</li>
+  <li>If no output file is provided the program will write to "output.asm" by default.</li>
+</ul>
 
 If the output file already exists it will be overwritten, so please be careful!
 
 File format:
-File header of 128 bytes
-Next byte is 0xOD - each line that follows is terminated by 0xOD
-First two bytes of each line hold a representation of the line number in hex.
-EOF denoted by 0xFF
-
+<ul>
+  <li>File header of 128 bytes</li>
+  <li>Next byte is 0xOD - each line that follows is terminated by 0xOD</li>
+  <li>First two bytes of each line hold a representation of the line number in hex</li>
+  <li>EOF denoted by 0xFF</li>
+</ul>
+  
 Examples of two byte line numbers in hex:
-0010 - line 10
-0040 - line 40
-0120 - line 120
+<ul>
+  <li>0010 - line 10</li>
+  <li>0040 - line 40</li>
+  <li>0120 - line 120</li>
+</ul>
 and so on...
-
+<br>
 The conversion programme throws away the file header and then reads the rest of the file one byte at a time.
 The first two bytes of each line (following a carriage return 0x0D) are converted to ASCII
 Everything else is written out as-is.
