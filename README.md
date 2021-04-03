@@ -31,6 +31,7 @@ Examples of two byte line numbers in hex:
 </ul>
 and so on...
 <br>
+
 The conversion programme throws away the file header and then reads the rest of the file one byte at a time.
 The first two bytes of each line (following a carriage return 0x0D) are converted to ASCII
 Everything else is written out as-is.
